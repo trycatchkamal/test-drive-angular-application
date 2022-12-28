@@ -9,6 +9,8 @@ import { Employee } from '../../models/employee.model';
 })
 export class EmployeesComponent implements OnInit {
 
+  employees: Employee[] = [];
+
   constructor(private employeeService:EmployeesService) { }
 
   ngOnInit(): void {

@@ -1,1 +1,18 @@
-<p>employees works!</p>
+<div>
+
+    <table id="employee-table" data-employee="employee-table">
+        <th id="employee-table-header-Id">Id</th>
+        <th id="employee-table-header-Name">Name</th>
+        <th id="employee-table-header-Location">Location</th>
+        <th id="employee-table-header-Email">Email</th>
+        <th id="employee-table-header-Mobile">Mobile</th>
+        <tr data-employee="employee-record"  *ngFor="let employee of employees">
+          <td >{{employee.id}}</td>
+          <td >{{employee.displayName}}</td>
+          <td>{{employee.location}}</td>
+          <td >{{employee.email}}</td>
+          <td >{{employee.contact}}</td>
+        </tr>
+    </table>
+
+</div>

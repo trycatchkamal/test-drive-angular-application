@@ -40,6 +40,7 @@ describe('EmployeesComponent', () => {
   });
 
   it('Display the given records',()=>{
+    component.employees = [{} as Employee];
     fixture.detectChanges();
     expect(fixture.debugElement.query(By.css('[data-employee=employee-record]'))).toBeTruthy();
   });
