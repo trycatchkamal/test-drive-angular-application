@@ -24,4 +24,23 @@ describe('EmployeesComponent', () => {
   it('Should exist', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Should have employee table',()=>{
+    fixture.detectChanges();
+    expect(fixture.debugElement.query(By.css('#employee-table'))).toBeTruthy();
+  });
+
+  it('Should have all the columns in employee table',()=>{
+    fixture.detectChanges();
+    expect(fixture.debugElement.query(By.css('#employee-table-header-Id'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('#employee-table-header-Name'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('#employee-table-header-Location'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('#employee-table-header-Email'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('#employee-table-header-Mobile'))).toBeTruthy();
+  });
+
+  it('Display the given records',()=>{
+    fixture.detectChanges();
+    expect(fixture.debugElement.query(By.css('[data-employee=employee-record]'))).toBeTruthy();
+  });
 });
