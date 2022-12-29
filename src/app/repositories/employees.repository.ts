@@ -10,6 +10,13 @@ export class EmployeesRepository {
   constructor() { }
 
   public getRawEmployees(): Observable<RawEmployee[]> {
-    return of();
+    return from(fetch('../../assets/data.json')
+    .then(response => response.json())
+    .then(responseJson => {
+          var result= responseJson as RawEmployee[];
+          return result;
+        }
+      )
+    );
   }
 }

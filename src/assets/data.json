@@ -1,0 +1,47 @@
+[
+  { "number": "1",
+    "active":false,
+     "name": "John",
+     "bank_name": "Irelandbank",
+     "location":"India",
+     "email":"john@john.com",
+     "mobile":"11123"
+    },
+{
+  "number": "2",
+  "active":true,
+  "name": "Doe",
+  "bank_name": "Waterford",
+  "location":"India",
+  "email":"doe@doe.com",
+  "mobile":"54523"
+},
+{
+  "number": "3",
+  "active":true,
+  "name": "Will",
+  "bank_name": "Scotlandbank",
+  "location":"India",
+  "email":"will@will.com",
+  "mobile":"35445"
+},
+{
+  "number": "4",
+  "active":true,
+  "name": "Josh",
+  "bank_name": "Welshbank",
+  "location":"India",
+  "email":"josh@josh.com",
+  "mobile":"34112"
+},
+{
+  "number": "5",
+  "active":false,
+  "name": "Adam",
+  "bank_name": "Wexfordbank",
+  "location":"India",
+  "email":"adam@adam.com",
+  "mobile":"84563"
+}
+]
+
