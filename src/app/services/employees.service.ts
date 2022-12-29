@@ -16,23 +16,19 @@ export class EmployeesService {
       map(this.toListOfActiveEmployees)
     );
   }
+
   private toListOfActiveEmployees = (employees: RawEmployee[]): Employee[] => {
-    let result:Employee[]=[];
-
-    employees.forEach(item=> {
-      if(item.active ===true){
-        result.push(
-        {
-          displayName: item.name,
-          contact:item.mobile,
-          email: item.email,
-          location: item.location,
-          id: item.number,
-          bankName: item.bank_name,
-        });
+    return employees
+    .filter(employee=>employee.active==true)
+    .map(employee => {
+      return {
+      displayName: employee.name,
+      contact:employee.mobile,
+      email:employee.email,
+      location:employee.location,
+      id: employee.number,
+      bankName: employee.bank_name,
       }
-    })
-
-    return result;
+    });
   }
 }
